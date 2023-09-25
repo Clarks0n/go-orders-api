@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	app := application.New()
+	app := application.New(application.LoadConfig())
 
 	// Shutdown server if no connection, 1.set Context
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt) 
